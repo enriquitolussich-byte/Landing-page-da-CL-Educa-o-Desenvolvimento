@@ -55,7 +55,10 @@ export default function App() {
         <section className="hero" id="topo">
           <h1>Você toma decisões sobre a vida escolar do seu filho sem ter as informações certas.</h1>
           <p>Orientação especializada para pais que precisam entender o que está acontecendo — e o que fazer a respeito.</p>
-          <a className="btn" href={CONTACT_LINKS.whatsapp} target="_blank" rel="noopener">Quero entender minha situação</a>
+          <div className="hero-actions">
+            <a className="btn" href={CONTACT_LINKS.whatsapp} target="_blank" rel="noopener">Quero entender minha situação</a>
+            <a className="btn btn-whatsapp" href={CONTACT_LINKS.whatsapp} target="_blank" rel="noopener">Quero conversar pelo WhatsApp</a>
+          </div>
           <a className="text-link" href="#orientacao">Saiba mais sobre o serviço ↓</a>
         </section>
 
@@ -115,7 +118,7 @@ export default function App() {
         <section className="whatsapp-cta section">
           <h2>Pronto para entender sua situação?</h2>
           <p>O primeiro passo é uma triagem inicial sem custo e sem compromisso.</p>
-          <a className="btn white" href={CONTACT_LINKS.whatsapp} target="_blank" rel="noopener"><span aria-hidden="true">☎</span> Falar com Cleonice no WhatsApp</a>
+          <a className="btn white" href={CONTACT_LINKS.whatsapp} target="_blank" rel="noopener"><span aria-hidden="true">☎</span> Falar pelo WhatsApp</a>
         </section>
 
         <section className="section form-section">
@@ -147,6 +150,7 @@ export default function App() {
             <span>|</span>
             <a href={CONTACT_LINKS.substack}>Substack</a>
           </nav>
+          <a className="btn btn-footer-whatsapp" href={CONTACT_LINKS.whatsapp} target="_blank" rel="noopener">Falar pelo WhatsApp</a>
           <p className="copyright">© 2026 CL Educação & Desenvolvimento. Este site não oferece diagnóstico, laudo clínico ou representação jurídica.</p>
         </div>
         <div className="footer-bar" aria-hidden="true" />

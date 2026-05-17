@@ -2,6 +2,6 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  plugins: [react()],
-  base: '/Landing-page-da-CL-Educa-o-Desenvolvimento/',
+      - name: Setup Node.js
+      
 })

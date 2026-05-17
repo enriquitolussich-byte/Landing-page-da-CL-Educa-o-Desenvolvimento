@@ -22,17 +22,36 @@ Acesse o endereço mostrado no terminal (normalmente `http://localhost:5173`).
 npm run build
 ```
 
-## 4) Publicar na Vercel
+## 4) Preview local do build
 
-1. Faça push do repositório no GitHub/GitLab/Bitbucket.
-2. Na Vercel, clique em **Add New Project**.
-3. Importe o repositório.
-4. Framework Preset: **Vite**.
-5. Build command: `npm run build`.
-6. Output directory: `dist`.
-7. Deploy.
+```bash
+npm run preview
+```
 
-## 5) Onde trocar links e textos principais
+## 5) Publicar no GitHub Pages
+
+Este projeto está configurado para publicar automaticamente no GitHub Pages via GitHub Actions.
+
+### Pré-requisitos no GitHub
+
+1. Vá em **Settings > Pages** do repositório.
+2. Em **Build and deployment**, selecione **Source: GitHub Actions**.
+3. Garanta que a branch principal seja `main`.
+
+### Como publicar
+
+1. Faça commit das alterações.
+2. Faça push para a branch `main`.
+3. O workflow `.github/workflows/deploy.yml` irá:
+   - instalar dependências
+   - executar `npm run build`
+   - publicar `dist` no GitHub Pages
+
+URL esperada de publicação:
+
+`https://enriquitolussich-byte.github.io/Landing-page-da-CL-Educa-o-Desenvolvimento/`
+
+## 6) Onde trocar links e textos principais
 
 - **Links centralizados**: `src/constants.js`
   - WhatsApp
@@ -42,7 +61,7 @@ npm run build
 - **Textos da página**: `src/App.jsx`
 - **Cores e estilos globais**: `src/styles.css`
 
-## 6) Onde integrar formulário futuramente
+## 7) Onde integrar formulário futuramente
 
 O formulário está em `src/App.jsx` e hoje **somente valida e mostra confirmação inline**.
 
